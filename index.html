@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDb Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>🎬 IMDb Clone</h1>
+        <button onclick="toggleMode()">🌙 Mode</button>
+    </div>
+
+    <div class="container">
+
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search movies..." onkeyup="autoSearch()">
+            <button onclick="searchMovies()">Search</button>
+            <button onclick="showWatchlist()">📺 Watchlist</button>
+
+            <div id="suggestions"></div>
+        </div>
+
+        <div id="movies"></div>
+
+    </div>
+
+    <div id="details" style="display:none;"></div>
+
+    <div id="loader" style="display:none;">
+        <h2>Loading... ⏳</h2>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
